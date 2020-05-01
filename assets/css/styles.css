@@ -1,0 +1,295 @@
+/*-------------
+ 	General
+-------------*/
+
+*{
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+html, body{
+	height: 100%;
+}
+html{
+	font: normal 16px sans-serif;
+	color: #555;
+}
+.custom-nav{
+	background: rgb(0, 0, 0);
+	background: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0.8158613787311799) 24%, rgba(255, 248, 248, 0) 100%);
+	background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0.8158613787311799) 24%, rgba(255, 248, 248, 0) 100%);
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.8158613787311799) 24%, rgba(255, 248, 248, 0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#fff8f8", GradientType=1);
+	position: absolute !important;
+	margin:0 !important;
+	top: 0;
+	left:0;
+	right:0;
+	z-index: 1030;
+}
+.custom-nav .container{
+	border-bottom:3px solid white;
+}
+.custom-nav .flex-end{
+	justify-content: flex-end;
+}
+.custom-nav .flex-center{
+	justify-content: center;
+}
+.custom-nav .navbar-nav .nav-link{
+	text-decoration: none;
+	color: white;
+	font-size:1.2em;
+	padding:2px;
+	font-family: 'Montserrat', sans-serif;
+}
+.custom-nav .navbar-nav .nav-link:hover{
+	color:#ccccb3;
+}
+#login, #sign-up{
+	border:1px solid white;
+	border-radius:20px;
+	margin-left:10px;
+	transition: background 0.5s, color 0.5s;
+}
+#login:hover,
+#sign-up:hover{
+	background:white;
+	color:black;
+	cursor: pointer;
+}
+/*----------------
+ 	Hero Section
+----------------*/
+.hero {
+	height: 100%;
+	color: #fff;
+	text-align: center;
+	background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url(/assets/img/img1.jpg) no-repeat center;
+	background-size: cover;
+}
+.hero .hero-title{
+	font: normal 28px 'Montserrat', sans-serif;
+	font-weight: lighter;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+}
+.hero h3 strong{
+  font-weight: bold;
+  font-size:35px;
+}
+.hero-footer-image{
+	width:100%;
+	height:22%;
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+}
+.hero-footer-image img{
+	max-width:100%;
+}
+/*--------------------
+ 	Our Work Section
+---------------------*/
+.our-work .our-work-content{
+	text-align: center;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.our-work .our-work-image img{
+	max-width:100%;
+}
+/*----------------------
+ 	Features Section
+----------------------*/
+.features{
+	padding: 5em 0 10em 0;
+}
+.features .feature img{
+	max-width:100%;
+	transition: transform 0.25s;
+}
+.features img:hover{
+	transform: scale(1.15);
+}
+/*----------------------
+ 	Daily Food Structure Section
+----------------------*/
+.daily-food-str h3.title img{
+	max-width:60%;
+}
+.daily-food-str img.type{
+	max-width:100%;
+	border:20px solid #e6ffff;
+	border-radius:100%;
+	transition: border 0.5s ease;
+}
+.daily-food-str img.type:hover{
+	border: 20px solid #7bf7fc;
+}
+.ar-lb{
+	position:absolute;
+	bottom:0;
+	right:0;
+}
+.ar-rb {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.daily-food-str .name{
+	border:none;
+	font-size:1.5em;
+	font-weight:bold;
+	background:none;
+}
+/*--------------------
+ 	Reviews Section
+--------------------*/
+
+.reviews{
+	background-color: #fff;
+}
+
+.reviews .quote{
+	text-align: center;
+	width: 80%;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.reviews .author{
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.reviews .author:last-child{
+    margin-bottom: 0;
+}
+
+@media (max-width: 1000px){
+
+	.reviews .quote{
+		font-size: 20px;
+	}
+
+	.reviews .author{
+	    font-size: 16px;
+	}
+
+}
+
+
+
+
+
+/*-------------
+ 	Footer
+-------------*/
+footer{
+	background: #1F1F1F;
+	padding-top:5em;
+}
+.footer-top-image {
+	width: 100%;
+	height: 20%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.footer-top-image img {
+	max-width: 100%;
+}
+footer .contact ul li{
+	display:block;
+	color:white;
+	padding:0.5em;
+	margin-left:50%;
+	transform: translateX(-45%);
+}
+footer img{
+	max-width:50%;
+}
+footer img.left{
+	position: absolute;
+	left:0;
+	bottom:0;
+}
+footer img.right {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+/* Login Window */
+.login-modal .modal-content{
+	height:33rem;
+	padding: 0 1em 1em 1em;
+}
+.login-modal form{
+	width:50%;
+	text-align:center;
+	margin-left:7%;
+	margin-top:20%;
+}
+.login-modal .modal-content .form-group{
+	width:100%;
+	transition: width 0.5s;
+}
+.login-modal form button{
+	padding:0.2em 1.5em;
+	border-radius: 20px;
+}
+.login-modal form button:hover{
+	box-shadow:1px 5px 8px black;
+}
+.login-modal .modal-body{
+	z-index:10;
+}
+.login-modal .close{
+	z-index:10;
+}
+.login-modal .modal-content img{
+	max-width:70%;
+	position:absolute;
+	bottom:-11px;
+	right:-13px;
+	padding:0;
+	z-index: 0;
+}
+/* Registration modal */
+.reg-modal .modal-content {
+	padding: 0 2em 2em 2em;
+}
+.reg-modal button[type="submit"]{
+	margin-left:50%;
+	transform: translateX(-50%);
+	background: #ccffff;
+	color: #004d4d;
+	border:none;
+	font-weight:bold;
+	width:40%;
+	transition: background 0.5s, color 0.5s;
+}
+.reg-modal button[type="submit"]:hover {
+	background:#3385ff;
+	color:white;
+}
+.reg-modal form {
+	width: 75%;
+	text-align: center;
+	margin-left:50%;
+	transform:translateX(-50%);
+}
