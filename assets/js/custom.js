@@ -11,3 +11,26 @@ $(document).ready(function(){
     wow.init();
 
 });
+
+$(window).resize(function(){
+    try {
+        var width = $('.foods .card .card-img-top').css('width');
+        $('.foods .card .card-img-top').css({'height': width});
+    } catch (error) {}
+});
+try {
+    $('.section-cuisine .cuisine .overlay').each(function(){
+        $(this).mouseover(function(){
+            $(this).css({
+                'opacity': '1',
+            })
+        });
+    });
+    $('.section-cuisine .cuisine .overlay').each(function () {
+        $(this).mouseout(function () {
+            $(this).css({
+                'opacity': '0',
+            })
+        });
+    });
+} catch (error) {}

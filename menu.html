@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Enjoy our delicious foods!</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="shortcut icon" href="assets/icons/shortcut_icon.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg custom-nav row wow fadeInDown">
+        <div class="container">
+            <a class="navbar-brand col-md-2 col-lg-2" href="index.html"><img src="assets/projectPhotos/logo.png" alt="logo"></a>
+            <div class="collapse navbar-collapse col-md-10 col-lg-10" id="navbarText">
+                <ul class="navbar-nav p-0 col-md-9 col-lg-9 flex-center">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="menu.html">Menu <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Drinks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Table Ordering</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacts</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav col-md-3 col-lg-3 p-0 flex-end">
+                    <li class="nav-item">
+                        <a class="nav-link" id="login" data-toggle="modal" data-target="#loginWindow">Log in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="sign-up" data-toggle="modal"
+                            data-target="#registrationWindow">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+                </span>
+            </button>
+        </div>
+    </nav>
+    <section class="menu-header position-relative">
+        <h3 class="title">Our Menu</h3>
+        <div class="hero-footer-image">
+            <img src="assets/projectPhotos/ink white.png" alt="">
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="section-cuisine fadeInUp mt-5" data-wow-duration="1s" data-wow-delay="300ms">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="cuisine cuisine-uzb">
+                        <div class="overlay text-center">
+                            <span>Uzbek</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="cuisine cuisine-eu">
+                        <div class="overlay text-center">
+                            <span>European</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="cuisine cuisine-china">
+                        <div class="overlay text-center">
+                            <span>Chinese</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="cuisine cuisine-italy">
+                        <div class="overlay text-center">
+                            <span>Italian</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="food-types">
+            <div class="row">
+                <div class="col-md-3 col-lg-3 col-sm-6 mt-3">
+                    <div class="item text-center traditional">
+                        <span>Traditional</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-6 mt-3">
+                    <div class="item text-center salad">
+                        <span>Salad</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-6 mt-3">
+                    <div class="item text-center fish">
+                        <span>Fish</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-6 mt-3">
+                    <div class="item text-center soup">
+                        <span>Soup</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="foods">
+            <h2 class="title text-center">Traditional foods</h2>
+            <div class="row">
+                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                    <div class="item">
+                        <div class="card">
+                            <img class="card-img-top" src="assets/img/Food/manti.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title text-left">Manti</h4>
+                                <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
+                                <div class="row">
+                                    <p class="col-md-6 price">4000 sum</p>
+                                    <p class="col-md-6 text-right">
+                                        <input type="number" name="quantity" value='1' min='1' class="quantity">
+                                    </p>
+                                </div>
+                                <a href="#" class="btn order-btn">Order</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                    <div class="item">
+                        <div class="card">
+                            <img class="card-img-top" src="assets/img/Food/manti.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title text-left">Manti</h4>
+                                <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
+                                <div class="row">
+                                    <p class="col-md-6 price">4000 sum</p>
+                                    <p class="col-md-6 text-right">
+                                        <input type="number" name="quantity" value='1' min='1' class="quantity">
+                                    </p>
+                                </div>
+                                <a href="#" class="btn order-btn">Order</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                    <div class="item">
+                        <div class="card">
+                            <img class="card-img-top" src="assets/img/Food/manti.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title text-left">Manti</h4>
+                                <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
+                                <div class="row">
+                                    <p class="col-md-6 price">4000 sum</p>
+                                    <p class="col-md-6 text-right">
+                                        <input type="number" name="quantity" value='1' min='1' class="quantity">
+                                    </p>
+                                </div>
+                                <a href="#" class="btn order-btn">Order</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                    <div class="item">
+                        <div class="card">
+                            <img class="card-img-top" src="assets/img/Food/manti.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title text-left">Manti</h4>
+                                <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
+                                <div class="row">
+                                    <p class="col-md-6 price">4000 sum</p>
+                                    <p class="col-md-6 text-right">
+                                        <input type="number" name="quantity" value='1' min='1' class="quantity">
+                                    </p>
+                                </div>
+                                <a href="#" class="btn order-btn">Order</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                    <div class="item">
+                        <div class="card">
+                            <img class="card-img-top" src="assets/img/Food/manti.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title text-left">Manti</h4>
+                                <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
+                                <div class="row">
+                                    <p class="col-md-6 price">4000 sum</p>
+                                    <p class="col-md-6 text-right">
+                                        <input type="number" name="quantity" value='1' min='1' class="quantity">
+                                    </p>
+                                </div>
+                                <a href="#" class="btn order-btn">Order</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                    <div class="item">
+                        <div class="card">
+                            <img class="card-img-top" src="assets/img/Food/manti.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title text-left">Manti</h4>
+                                <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
+                                <div class="row">
+                                    <p class="col-md-6 price">4000 sum</p>
+                                    <p class="col-md-6 text-right">
+                                        <input type="number" name="quantity" value='1' min='1' class="quantity">
+                                    </p>
+                                </div>
+                                <a href="#" class="btn order-btn">Order</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal login-modal fade" id="loginWindow" tabindex="-1" role="dialog" aria-labelledby="loginWindowTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content position-relative">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Login Form</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="POST">
+                        <h5><strong>Log</strong> into <span class="text-primary">Account</span></h5>
+                        <div class="form-group" id="loginFormEmail">
+                            <input type="email" class="form-control" placeholder="Email" required>
+                        </div>
+                        <div class="form-group" id="loginFormPassword">
+                            <input type="password" class="form-control" placeholder="Password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Login</button>
+                    </form>
+                </div>
+                <img src="assets/projectPhotos/ice-tea.png" alt="" class="login-bg">
+            </div>
+        </div>
+    </div>
+
+    <!-- Registration Modal -->
+    <div class="modal reg-modal fade" id="registrationWindow" tabindex="-1" role="dialog"
+        aria-labelledby="registrationWindowTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content position-relative">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Registration Form</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="POST">
+                        <h5 class="text-center text-primary"><strong>Register</strong></h5>
+                        <div class="form-group" id="loginFormEmail">
+                            <input type="text" class="form-control" placeholder="Full Name">
+                        </div>
+                        <div class="form-group" id="loginFormEmail">
+                            <input type="email" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="form-group" id="loginFormPassword">
+                            <input type="text" class="form-control" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group" id="loginFormEmail">
+                            <input type="password" class="form-control" placeholder="Password">
+                        </div>
+                        <div class="form-group" id="loginFormEmail">
+                            <input type="password" class="form-control" placeholder="Confirm Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="position-relative">
+        <div class="footer-top-image">
+            <img src="assets/projectPhotos/ink_white_footer.png" alt="">
+        </div>
+        <div class="row m-0">
+            <div class="col-md-4 col-lg-4 position-relative">
+                <img src="assets/projectPhotos/limonPattern_left.png" alt="" class="left wow fadeInLeft">
+            </div>
+            <div class="col-md-4 col-lg-4 container">
+                <h1 class="fantasy text-center"><a href="#"> <img src="assets/projectPhotos/logo.png" alt="logo"></a>
+                </h1>
+                <div class="contact">
+                    <ul class="list-unstyled">
+                        <li class="contact-item">
+                            <i class="fas fa-map-marker-alt fa-2x float-left"></i>
+                            <span class="pl-1">Ziyolilar st, Mirzo Ulugbek <br> dis. Tashkent Uzbekistan</span>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fas fa-phone fa-2x float-left"></i>
+                            <span class="pl-1">+99871 268-41-23</span>
+                        </li>
+                        <li class="contact-item">
+                            <i class="far fa-envelope fa-2x float-left"></i>
+                            <span class="pl-1">fantasy@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 position-relative">
+                <img src="assets/projectPhotos/limonPattern_right.png" alt="" class="right wow fadeInRight">
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script>
+        var wow = new WOW();
+        wow.init();
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            if (scroll > 10) {
+                $('.custom-nav').addClass('wow fadeInDown');
+            }
+        });
+    </script>
+</body>
+
+</html>
