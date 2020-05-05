@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Jasur!</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="shortcut icon" href="assets/icons/shortcut_icon.png">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg custom-nav row wow fadeInDown">
+        <div class="container">
+            <a class="navbar-brand col-md-2 col-lg-2" href="index.html"><img src="assets/projectPhotos/logo.png"
+                    alt="logo"></a>
+            <div class="collapse navbar-collapse col-md-10 col-lg-10" id="navbarText">
+                <ul class="navbar-nav p-0 col-md-9 col-lg-9 flex-center">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="menu.html">Menu <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Drinks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Table Ordering</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacts</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav col-md-3 col-lg-3 p-0 flex-end">
+                    <li class="nav-item">
+                        <a class="nav-link" id="login" data-toggle="modal" data-target="#loginWindow">Log in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="sign-up" data-toggle="modal"
+                            data-target="#registrationWindow">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+                </span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="dashboard-header position-relative">
+        <div class="title">
+            <h3>Welcome, Jasur Makhsudov!</h3>
+            <p>Tired of making bugs?? Check your dashboard!</p>
+        </div>
+        <div class="hero-footer-image">
+            <img src="assets/projectPhotos/ink white.png" alt="">
+        </div>
+    </section>
+    <div class="container">
+        <div class="user-info row">
+            <div class="avatar col-md-3 col-lg-3 text-center pt-4">
+                <i class="far fa-user-circle fa-10x"></i>
+            </div>
+            <div class="info-content col-md-6 col-lg-6">
+                <div class="row">
+                    <h4 class="name col-md-12">Jasur Makhsudov</h4>
+                    <div class="col-md-6 col-sm-12">
+                        <i class="fas fa-phone"></i> <strong>Phone Number:</strong><br> +998994583625
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <i class="fas fa-mail-bulk"></i> <strong>Email:</strong><br> hot@gmail.com
+                    </div>
+                    <div class="col-sm-12">
+                        <i class="fa fa-map-marker"></i> <strong>Address:</strong> Chilonzor-19, 8, 12
+                    </div>
+                </div>
+            </div>
+            <div class="status-container col-md-3 col-sm-3">
+                <div class="row">
+                    <a class="btn btn-edit-profile col-12" data-toggle="modal" data-target="#editProfileWindow">
+                        Edit profile
+                    </a>
+                    <div class="col-12 status mt-2">
+                        <div class="vaucher" style="background-image: url(/assets/img/status-gold.jpg); background-size:cover;">
+                            <h3 class="type text-center text-uppercase">Gold</h3>
+                            <p class="value text-danger text-center">7% off for any order</p>
+                        </div>
+                        <h4 class="text-center text-uppercase text-info">Status</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="statistics">
+            <div class="row">
+                <div class="col-md-3 col-sm-12"></div>
+                <div class="col-md-3 col-sm-12">
+                    <div class="item" id="total-orders">
+                        <h2 class="value text-left timer" data-from="0" data-to="112" data-speed="1000">0</h2>
+                        <p class="title">Total orders</p>
+                        <i class="fas fa-shopping-cart fa-3x custom-i"></i>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <div class="item" id="total-expenses">
+                        <h2 class="value text-left">$<span class="timer" data-from="0" data-to="1520"
+                                data-speed="2000">0</span></h2>
+                        <p class="title">Total expenses</p>
+                        <i class="fas fa-wallet fa-3x custom-i"></i>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12"></div>
+            </div>
+        </section>
+        <section class="history">
+            <h2 class="text-center text-info mb-4">Here are the list of orders you recently made</h2>
+            <div class="listings">
+                <div class="item">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="assets/img/Food/manti.jpg" alt="">
+                        </div>
+                        <div class="col-md-7 item-content position-relative">
+                            <h5 class="name">Mazali Bemaza Manti</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae cumque vero eaque 
+                                voluptatum porro qui, asperiores voluptatibus nemo, sapiente corporis et in deleniti </p>
+                            <span class="badge badge-danger p-2 price">$7.45</span>
+                        </div>
+                        <div class="col-md-3 p-2 text-center right">
+                            <div class="date p-3">
+                                <i class="far fa-calendar-alt"></i> Date: <br>
+                                2020-01-15
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="assets/img/Food/manti.jpg" alt="">
+                        </div>
+                        <div class="col-md-7 item-content position-relative">
+                            <h5 class="name">Mazali Bemaza Manti</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae cumque vero eaque
+                                voluptatum porro qui, asperiores voluptatibus nemo, sapiente corporis et in deleniti
+                            </p>
+                            <span class="badge badge-danger p-2 price">$7.45</span>
+                        </div>
+                        <div class="col-md-3 p-2 text-center right">
+                            <div class="date p-3">
+                                <i class="far fa-calendar-alt"></i> Date: <br>
+                                2020-01-15
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="assets/img/Food/manti.jpg" alt="">
+                        </div>
+                        <div class="col-md-7 item-content position-relative">
+                            <h5 class="name">Mazali Bemaza Manti</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae cumque vero eaque
+                                voluptatum porro qui, asperiores voluptatibus nemo, sapiente corporis et in deleniti
+                            </p>
+                            <span class="badge badge-danger p-2 price">$7.45</span>
+                        </div>
+                        <div class="col-md-3 p-2 text-center right">
+                            <div class="date p-3">
+                                <i class="far fa-calendar-alt"></i> Date: <br>
+                                2020-01-15
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="assets/img/Food/manti.jpg" alt="">
+                        </div>
+                        <div class="col-md-7 item-content position-relative">
+                            <h5 class="name">Mazali Bemaza Manti</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae cumque vero eaque
+                                voluptatum porro qui, asperiores voluptatibus nemo, sapiente corporis et in deleniti
+                            </p>
+                            <span class="badge badge-danger p-2 price">$7.45</span>
+                        </div>
+                        <div class="col-md-3 p-2 text-center right">
+                            <div class="date p-3">
+                                <i class="far fa-calendar-alt"></i> Date: <br>
+                                2020-01-15
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="assets/img/Food/manti.jpg" alt="">
+                        </div>
+                        <div class="col-md-7 item-content position-relative">
+                            <h5 class="name">Mazali Bemaza Manti</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae cumque vero eaque
+                                voluptatum porro qui, asperiores voluptatibus nemo, sapiente corporis et in deleniti
+                            </p>
+                            <span class="badge badge-danger p-2 price">$7.45</span>
+                        </div>
+                        <div class="col-md-3 p-2 text-center right">
+                            <div class="date p-3">
+                                <i class="far fa-calendar-alt"></i> Date: <br>
+                                2020-01-15
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+
+    <!-- Login Modal -->
+    <div class="modal login-modal fade" id="loginWindow" tabindex="-1" role="dialog" aria-labelledby="loginWindowTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content position-relative">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Login Form</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="POST">
+                        <h5><strong>Log</strong> into <span class="text-primary">Account</span></h5>
+                        <div class="form-group" id="loginFormEmail">
+                            <input type="email" class="form-control" placeholder="Email" required>
+                        </div>
+                        <div class="form-group" id="loginFormPassword">
+                            <input type="password" class="form-control" placeholder="Password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Login</button>
+                    </form>
+                </div>
+                <img src="assets/projectPhotos/ice-tea.png" alt="" class="login-bg">
+            </div>
+        </div>
+    </div>
+
+    <!-- Registration Modal -->
+    <div class="modal reg-modal fade" id="registrationWindow" tabindex="-1" role="dialog"
+        aria-labelledby="registrationWindowTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content position-relative">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Registration Form</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="POST">
+                        <h5 class="text-center text-primary"><strong>Register</strong></h5>
+                        <div class="form-group" id="loginFormEmail">
+                            <input type="text" class="form-control" placeholder="Full Name">
+                        </div>
+                        <div class="form-group" id="loginFormEmail">
+                            <input type="email" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="form-group" id="loginFormPassword">
+                            <input type="text" class="form-control" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group" id="loginFormEmail">
+                            <input type="password" class="form-control" placeholder="Password">
+                        </div>
+                        <div class="form-group" id="loginFormEmail">
+                            <input type="password" class="form-control" placeholder="Confirm Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit profile Modal -->
+    <div class="modal edit-modal fade" id="editProfileWindow" tabindex="-1" role="dialog"
+        aria-labelledby="editProfileWindowTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content position-relative">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Edit Profile Form</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="POST">
+                        <h5 class="text-center text-primary"><strong>Edit your info</strong></h5>
+                        <div class="form-group" id="editFormName">
+                            <input type="text" class="form-control" placeholder="Full Name">
+                        </div>
+                        <div class="form-group" id="editFormEmail">
+                            <input type="email" class="form-control" placeholder="Email" value="sample@gmail.com" disabled>
+                        </div>
+                        <div class="form-group" id="editFormPhone">
+                            <input type="text" class="form-control" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group" id="editFormPassword">
+                            <input type="password" class="form-control" placeholder="Password">
+                        </div>
+                        <div class="form-group" id="editFormPassConf">
+                            <input type="password" class="form-control" placeholder="Confirm Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="position-relative">
+        <div class="footer-top-image">
+            <img src="assets/projectPhotos/ink_white_footer.png" alt="">
+        </div>
+        <div class="row m-0">
+            <div class="col-md-4 col-lg-4 position-relative">
+                <img src="assets/projectPhotos/limonPattern_left.png" alt="" class="left wow fadeInLeft">
+            </div>
+            <div class="col-md-4 col-lg-4 container">
+                <h1 class="fantasy text-center"><a href="#"> <img src="assets/projectPhotos/logo.png" alt="logo"></a>
+                </h1>
+                <div class="contact">
+                    <ul class="list-unstyled">
+                        <li class="contact-item">
+                            <i class="fas fa-map-marker-alt fa-2x float-left"></i>
+                            <span class="pl-1">Ziyolilar st, Mirzo Ulugbek <br> dis. Tashkent Uzbekistan</span>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fas fa-phone fa-2x float-left"></i>
+                            <span class="pl-1">+99871 268-41-23</span>
+                        </li>
+                        <li class="contact-item">
+                            <i class="far fa-envelope fa-2x float-left"></i>
+                            <span class="pl-1">fantasy@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 position-relative">
+                <img src="assets/projectPhotos/limonPattern_right.png" alt="" class="right wow fadeInRight">
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/jquery.countTo.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script>
+        $(".timer").waypoint(function(){
+        $(this).countTo()
+        },{triggerOnce:!0,offset:'90%'});
+    </script>
+</body>
+</html>
