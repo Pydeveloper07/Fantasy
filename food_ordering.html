@@ -28,19 +28,44 @@
                         <a class="nav-link" href="#">Drinks</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Table Ordering</a>
+                        <a class="nav-link" data-toggle="modal" data-target="#orderTableWindow">Table Ordering</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contacts</a>
+                        <a class="nav-link" data-toggle="modal" data-target="#contactUsWindow">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="user_dashboard.html">Dashboard</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav col-md-3 col-lg-3 p-0 flex-end">
-                    <li class="nav-item">
-                        <a class="nav-link" id="login" data-toggle="modal" data-target="#loginWindow">Log in</a>
+                    <li class="nav-item active">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown"
+                                id="cardButton">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                Cart
+                                <span class="badge badge-pill badge-danger">0</span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="cardButton">
+                                <div class="dropdown-item cart-view-header sticky-top">
+                                    <div class="row">
+                                        <div class="col-6 text-left">
+                                            <span>Total Price:</span>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <span class="badge badge-danger">$0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-content dropdown-item">
+
+                                </div>
+                                <a href="food_ordering.html" class="btn btn-success order-btn">Order</a>
+                            </div>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" id="sign-up" data-toggle="modal"
-                            data-target="#registrationWindow">Sign Up</a>
+                        <a class="nav-link" id="login" data-toggle="modal" data-target="#loginWindow">Logout</a>
                     </li>
                 </ul>
             </div>
@@ -55,7 +80,7 @@
 
     <section class="order-header position-relative">
         <div class="title">
-            <h3>Place Your Order</h3>
+            <h3>Not only at the restaurant...</h3>
             <p>Get your food easily from our take away service!</p>
         </div>
         <div class="hero-footer-image">
@@ -64,88 +89,84 @@
     </section>
 
     <div class="order-content row">
-        <div class="col-md-8 col-lg-8 col-sm-12 order-list row">
-            <div class="col-md-6 col-lg-6 col-sm-12 item">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="assets/img/Food/manti.jpg" alt="">
-                    </div>
-                    <div class="col-md-6 item-content">
-                        <h5 class="name">Mazali Bemaza Manti</h5>
-                        <span class="price">Due to covid-19 free</span>
-                    </div>
-                    <div class="col-md-2">
-                        <button class="btn btn-danger" id="removeItem">&times;</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-6 col-sm-12 item">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="assets/img/Food/manti.jpg" alt="">
-                    </div>
-                    <div class="col-md-6 item-content">
-                        <h5 class="name">Mazali Bemaza Manti</h5>
-                        <span class="price">Due to covid-19 free</span>
-                    </div>
-                    <div class="col-md-2">
-                        <button class="btn btn-danger" id="removeItem">&times;</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-6 col-sm-12 item">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="assets/img/Food/manti.jpg" alt="">
-                    </div>
-                    <div class="col-md-6 item-content">
-                        <h5 class="name">Mazali Bemaza Manti</h5>
-                        <span class="price">Due to covid-19 free</span>
-                    </div>
-                    <div class="col-md-2">
-                        <button class="btn btn-danger" id="removeItem">&times;</button>
+        <div class="col-md-8 col-lg-8 col-sm-12 order-list">
+            <div class="container row">
+                <div class="col-12 item">
+                    <div class="row">
+                        <div class="col-md-2 position-relative">
+                            <img src="assets/img/Food/manti.jpg" alt="">
+                        </div>
+                        <div class="col-md-8 item-content">
+                            <div class="row">
+                                <h5 class="col-md-8 col-lg-8 name">Mazali Bemaza Manti</h5>
+                                <div class="col-md-4 col-lg-4 text-right">
+                                    <span class="badge badge-danger price p-2">$15.99</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="row h-100">
+                                <form class="col-md-6 col-lg-6 quantity-form">
+                                    <div class="form-group">
+                                        <input type="number" class="form-control h-100" name="" id="" value="4">
+                                    </div>
+                                </form>
+                                <!-- <button class="btn btn-info flex-grow-1" id="updateItem"><i class="fas fa-pencil-alt"></i></button> -->
+                                <button class="btn btn-danger flex-grow-1 col-md-6 col-lg-6" id="removeItem"><i class="far fa-trash-alt"></i></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6 col-lg-6 col-sm-12 item">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="assets/img/Food/manti.jpg" alt="">
-                    </div>
-                    <div class="col-md-6 item-content">
-                        <h5 class="name">Mazali Bemaza Manti</h5>
-                        <span class="price">Due to covid-19 free</span>
-                    </div>
-                    <div class="col-md-2">
-                        <button class="btn btn-danger" id="removeItem">&times;</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-6 col-sm-12 item">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="assets/img/Food/manti.jpg" alt="">
-                    </div>
-                    <div class="col-md-6 item-content">
-                        <h5 class="name">Mazali Bemaza Manti</h5>
-                        <span class="price">Due to covid-19 free</span>
-                    </div>
-                    <div class="col-md-2">
-                        <button class="btn btn-danger" id="removeItem">&times;</button>
+                <div class="col-12 item">
+                    <div class="row">
+                        <div class="col-md-2 position-relative">
+                            <img src="assets/img/Food/manti.jpg" alt="">
+                        </div>
+                        <div class="col-md-8 item-content">
+                            <div class="row">
+                                <h5 class="col-md-8 col-lg-8 name">Mazali Bemaza Manti</h5>
+                                <div class="col-md-4 col-lg-4 text-right">
+                                    <span class="badge badge-danger price p-2">$15.99</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="row h-100">
+                                <form class="col-md-6 col-lg-6 quantity-form">
+                                    <div class="form-group">
+                                        <input type="number" class="form-control h-100" name="" id="" value="4">
+                                    </div>
+                                </form>
+                                <!-- <button class="btn btn-info flex-grow-1" id="updateItem"><i class="fas fa-pencil-alt"></i></button> -->
+                                <button class="btn btn-danger flex-grow-1 col-md-6 col-lg-6" id="removeItem"><i class="far fa-trash-alt"></i></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6 col-lg-6 col-sm-12 item">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="assets/img/Food/manti.jpg" alt="">
-                    </div>
-                    <div class="col-md-6 item-content">
-                        <h5 class="name">Mazali Bemaza Manti</h5>
-                        <span class="price">Due to covid-19 free</span>
-                    </div>
-                    <div class="col-md-2">
-                        <button class="btn btn-danger" id="removeItem">&times;</button>
+                <div class="col-12 item">
+                    <div class="row">
+                        <div class="col-md-2 position-relative">
+                            <img src="assets/img/Food/manti.jpg" alt="">
+                        </div>
+                        <div class="col-md-8 item-content">
+                            <div class="row">
+                                <h5 class="col-md-8 col-lg-8 name">Mazali Bemaza Manti</h5>
+                                <div class="col-md-4 col-lg-4 text-right">
+                                    <span class="badge badge-danger price p-2">$15.99</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="row h-100">
+                                <form class="col-md-6 col-lg-6 quantity-form">
+                                    <div class="form-group">
+                                        <input type="number" class="form-control h-100" name="" id="" value="4">
+                                    </div>
+                                </form>
+                                <!-- <button class="btn btn-info flex-grow-1" id="updateItem"><i class="fas fa-pencil-alt"></i></button> -->
+                                <button class="btn btn-danger flex-grow-1 col-md-6 col-lg-6" id="removeItem"><i class="far fa-trash-alt"></i></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -269,6 +290,94 @@
                             <input type="password" class="form-control" placeholder="Confirm Password">
                         </div>
                         <button type="submit" class="btn btn-primary mb-2">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Us Modal -->
+    <div class="modal reg-modal fade" id="contactUsWindow" tabindex="-1" role="dialog"
+        aria-labelledby="contactUsWindowTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content position-relative">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Contact Us Form</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="POST">
+                        <h5 class="text-center text-primary"><strong>Contact Us</strong></h5>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Full Name" name="name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="message" cols="30" rows="3"
+                                placeholder="Enter your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Table Ordering Modal -->
+    <div class="modal reg-modal fade" id="orderTableWindow" tabindex="-1" role="dialog"
+        aria-labelledby="orderTableWindowTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content position-relative">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Table Reservation Form</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="POST" id="tableOrderForm">
+                        <h5 class="text-center text-primary"><strong>Get your table easily!</strong></h5>
+                        <div class="form-group" id="tables">
+                            <select class="form-control" name="tableId" aria-describedby="tableHelp">
+                                <option value="" disabled>Choose your table</option>
+                                <option value="1">Table #1</option>
+                                <option value="2">Table #2</option>
+                                <option value="3">Table #3</option>
+                                <option value="4">Table #4</option>
+                                <option value="5">Table #5</option>
+                                <option value="6">Table #6</option>
+                                <option value="7">Table #7</option>
+                                <option value="8">Table #8</option>
+                                <option value="9">Table #9</option>
+                                <option value="10">Table #10</option>
+                                <option value="11">Table #11</option>
+                            </select>
+                            <small id="tableHelp" class="form-text text-danger font-weight-bold">
+                                Table #1 is busy: <span>9:00-10:30</span>,
+                                <span>9:00-10:30</span>
+                            </small>
+                        </div>
+                        <div class="form-group">
+                            <label for="numberOfPeople">How many are you?</label>
+                            <input type="number" class="form-control" id="numberOfPeople" min="1" max="15">
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="reserveStartTime">from</label>
+                                    <input type="time" class="form-control" id="reserveStartTime">
+                                </div>
+                                <div class="col-6">
+                                    <label for="reserveEndTime">to</label>
+                                    <input type="time" class="form-control" id="reserveEndTime">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Reserve</button>
                     </form>
                 </div>
             </div>

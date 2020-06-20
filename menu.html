@@ -35,19 +35,47 @@
                         <a class="nav-link" href="#">Drinks</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Table Ordering</a>
+                        <a class="nav-link" data-toggle="modal" data-target="#orderTableWindow">Table Ordering</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contacts</a>
+                        <a class="nav-link" data-toggle="modal" data-target="#contactUsWindow">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="user_dashboard.html">Dashboard</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav col-md-3 col-lg-3 p-0 flex-end">
-                    <li class="nav-item">
-                        <a class="nav-link" id="login" data-toggle="modal" data-target="#loginWindow">Log in</a>
+                    <li class="nav-item active">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown"
+                                id="cardButton">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                Cart
+                                <span class="badge badge-pill badge-danger" id="cartNumberOfItems">0</span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="cardButton" id="cart">
+                                <div class="dropdown-item cart-view-header sticky-top">
+                                    <div class="row">
+                                        <div class="col-6 text-left">
+                                            <span>Total Price:</span>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <span class="badge badge-danger" id="totalPrice">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-content dropdown-item">
+                                    <div class="items">
+                                        <div class="cart-item">
+
+                                        </div>
+                                    </div>
+                                </div> 
+                                <a href="food_ordering.html" class="btn btn-success order-btn">Order</a> </div>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" id="sign-up" data-toggle="modal"
-                            data-target="#registrationWindow">Sign Up</a>
+                        <a class="nav-link" id="login" data-toggle="modal" data-target="#loginWindow">Logout</a>
                     </li>
                 </ul>
             </div>
@@ -133,15 +161,19 @@
                         <div class="card">
                             <img class="card-img-top" src="assets/img/Food/manti.jpg" alt="Card image cap">
                             <div class="card-body">
-                                <h4 class="card-title text-left">Manti</h4>
-                                <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
-                                <div class="row">
-                                    <p class="col-md-6 price">4000 sum</p>
-                                    <p class="col-md-6 text-right">
-                                        <input type="number" name="quantity" value='1' min='1' class="quantity">
-                                    </p>
-                                </div>
-                                <a href="#" class="btn order-btn">Order</a>
+                                <form action="" method="post" id="formfood">
+                                    <h4 class="card-title text-left food-name">Manti</h4>
+                                    <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
+                                    <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
+                                    <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
+                                    <div class="row">
+                                        <p class="col-md-6 price" data-price="40000">40,000 sum</p>
+                                        <p class="col-md-6 text-right">
+                                            <input type="number" name="quantity" value='1' min='1' class="quantity">
+                                        </p>
+                                    </div>
+                                    <input type="submit" class="btn order-btn" value="Order">
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -151,15 +183,19 @@
                         <div class="card">
                             <img class="card-img-top" src="assets/img/Food/manti.jpg" alt="Card image cap">
                             <div class="card-body">
-                                <h4 class="card-title text-left">Manti</h4>
-                                <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
-                                <div class="row">
-                                    <p class="col-md-6 price">4000 sum</p>
-                                    <p class="col-md-6 text-right">
-                                        <input type="number" name="quantity" value='1' min='1' class="quantity">
-                                    </p>
-                                </div>
-                                <a href="#" class="btn order-btn">Order</a>
+                                <form action="" method="post" id="formfood">
+                                    <h4 class="card-title text-left food-name">Manti</h4>
+                                    <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
+                                    <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
+                                    <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
+                                    <div class="row">
+                                        <p class="col-md-6 price" data-price="40000">40,000 sum</p>
+                                        <p class="col-md-6 text-right">
+                                            <input type="number" name="quantity" value='1' min='1' class="quantity">
+                                        </p>
+                                    </div>
+                                    <input type="submit" class="btn order-btn" value="Order">
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -169,15 +205,19 @@
                         <div class="card">
                             <img class="card-img-top" src="assets/img/Food/manti.jpg" alt="Card image cap">
                             <div class="card-body">
-                                <h4 class="card-title text-left">Manti</h4>
-                                <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
-                                <div class="row">
-                                    <p class="col-md-6 price">4000 sum</p>
-                                    <p class="col-md-6 text-right">
-                                        <input type="number" name="quantity" value='1' min='1' class="quantity">
-                                    </p>
-                                </div>
-                                <a href="#" class="btn order-btn">Order</a>
+                                <form action="" method="post" id="formfood">
+                                    <h4 class="card-title text-left food-name">Manti</h4>
+                                    <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
+                                    <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
+                                    <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
+                                    <div class="row">
+                                        <p class="col-md-6 price" data-price="40000">40,000 sum</p>
+                                        <p class="col-md-6 text-right">
+                                            <input type="number" name="quantity" value='1' min='1' class="quantity">
+                                        </p>
+                                    </div>
+                                    <input type="submit" class="btn order-btn" value="Order">
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -187,15 +227,19 @@
                         <div class="card">
                             <img class="card-img-top" src="assets/img/Food/manti.jpg" alt="Card image cap">
                             <div class="card-body">
-                                <h4 class="card-title text-left">Manti</h4>
-                                <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
-                                <div class="row">
-                                    <p class="col-md-6 price">4000 sum</p>
-                                    <p class="col-md-6 text-right">
-                                        <input type="number" name="quantity" value='1' min='1' class="quantity">
-                                    </p>
-                                </div>
-                                <a href="#" class="btn order-btn">Order</a>
+                                <form action="" method="post" id="formfood">
+                                    <h4 class="card-title text-left food-name">Manti</h4>
+                                    <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
+                                    <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
+                                    <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
+                                    <div class="row">
+                                        <p class="col-md-6 price" data-price="40000">40,000 sum</p>
+                                        <p class="col-md-6 text-right">
+                                            <input type="number" name="quantity" value='1' min='1' class="quantity">
+                                        </p>
+                                    </div>
+                                    <input type="submit" class="btn order-btn" value="Order">
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -205,33 +249,19 @@
                         <div class="card">
                             <img class="card-img-top" src="assets/img/Food/manti.jpg" alt="Card image cap">
                             <div class="card-body">
-                                <h4 class="card-title text-left">Manti</h4>
-                                <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
-                                <div class="row">
-                                    <p class="col-md-6 price">4000 sum</p>
-                                    <p class="col-md-6 text-right">
-                                        <input type="number" name="quantity" value='1' min='1' class="quantity">
-                                    </p>
-                                </div>
-                                <a href="#" class="btn order-btn">Order</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                    <div class="item">
-                        <div class="card">
-                            <img class="card-img-top" src="assets/img/Food/manti.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <h4 class="card-title text-left">Manti</h4>
-                                <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
-                                <div class="row">
-                                    <p class="col-md-6 price">4000 sum</p>
-                                    <p class="col-md-6 text-right">
-                                        <input type="number" name="quantity" value='1' min='1' class="quantity">
-                                    </p>
-                                </div>
-                                <a href="#" class="btn order-btn">Order</a>
+                                <form action="" method="post" id="formfood">
+                                    <h4 class="card-title text-left food-name">Manti</h4>
+                                    <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
+                                    <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
+                                    <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
+                                    <div class="row">
+                                        <p class="col-md-6 price" data-price="40000">40,000 sum</p>
+                                        <p class="col-md-6 text-right">
+                                            <input type="number" name="quantity" value='1' min='1' class="quantity">
+                                        </p>
+                                    </div>
+                                    <input type="submit" class="btn order-btn" value="Order">
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -303,6 +333,92 @@
             </div>
         </div>
     </div>
+    <!-- Table Ordering Modal -->
+    <div class="modal reg-modal fade" id="orderTableWindow" tabindex="-1" role="dialog"
+        aria-labelledby="orderTableWindowTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content position-relative">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Table Reservation Form</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="POST" id="tableOrderForm">
+                        <h5 class="text-center text-primary"><strong>Get your table easily!</strong></h5>
+                        <div class="form-group" id="tables">
+                            <select class="form-control" name="tableId" aria-describedby="tableHelp">
+                                <option value="" disabled>Choose your table</option>
+                                <option value="1">Table #1</option>
+                                <option value="2">Table #2</option>
+                                <option value="3">Table #3</option>
+                                <option value="4">Table #4</option>
+                                <option value="5">Table #5</option>
+                                <option value="6">Table #6</option>
+                                <option value="7">Table #7</option>
+                                <option value="8">Table #8</option>
+                                <option value="9">Table #9</option>
+                                <option value="10">Table #10</option>
+                                <option value="11">Table #11</option>
+                            </select>
+                            <small id="tableHelp" class="form-text text-danger font-weight-bold">
+                                Table #1 is busy: <span>9:00-10:30</span>,
+                                <span>9:00-10:30</span>
+                            </small>
+                        </div>
+                        <div class="form-group">
+                            <label for="numberOfPeople">How many are you?</label>
+                            <input type="number" class="form-control" id="numberOfPeople" min="1" max="15">
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="reserveStartTime">from</label>
+                                    <input type="time" class="form-control" id="reserveStartTime">
+                                </div>
+                                <div class="col-6">
+                                    <label for="reserveEndTime">to</label>
+                                    <input type="time" class="form-control" id="reserveEndTime">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Reserve</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Us Modal -->
+    <div class="modal reg-modal fade" id="contactUsWindow" tabindex="-1" role="dialog"
+        aria-labelledby="contactUsWindowTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content position-relative">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Contact Us Form</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="POST">
+                        <h5 class="text-center text-primary"><strong>Contact Us</strong></h5>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Full Name" name="name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="message" cols="30" rows="3"
+                                placeholder="Enter your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="position-relative">
         <div class="footer-top-image">
@@ -345,6 +461,7 @@
     <script src="assets/js/bootstrap.js"></script>
     <script src="assets/js/lightbox.js"></script>
     <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/cart.js"></script>
     <script>
         var wow = new WOW();
         wow.init();
