@@ -14,8 +14,8 @@ $(document).ready(function(){
 
 $(window).resize(function(){
     try {
-        var width = $('.foods .card .card-img-top').css('width');
-        $('.foods .card .card-img-top').css({'height': width});
+        var width = $('.card .image-container').css('width');
+        $('.card .image-container').css({'height': width});
     } catch (error) {}
 });
 try {

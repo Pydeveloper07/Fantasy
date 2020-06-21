@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/all.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/animate.css">
@@ -96,59 +97,43 @@
 
     <div class="container">
         <section class="section-cuisine fadeInUp mt-5" data-wow-duration="1s" data-wow-delay="300ms">
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <div class="cuisine cuisine-uzb">
-                        <div class="overlay text-center">
-                            <span>Uzbek</span>
-                        </div>
+            <div class="owl-carousel owl-theme owl-carousel-cuisine">
+                <div class="cuisine cuisine-uzb">
+                    <div class="overlay text-center">
+                        <span>Uzbek</span>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="cuisine cuisine-eu">
-                        <div class="overlay text-center">
-                            <span>European</span>
-                        </div>
+                <div class="cuisine cuisine-eu">
+                    <div class="overlay text-center">
+                        <span>European</span>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="cuisine cuisine-china">
-                        <div class="overlay text-center">
-                            <span>Chinese</span>
-                        </div>
+                <div class="cuisine cuisine-china">
+                    <div class="overlay text-center">
+                        <span>Chinese</span>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="cuisine cuisine-italy">
-                        <div class="overlay text-center">
-                            <span>Italian</span>
-                        </div>
+                <div class="cuisine cuisine-italy">
+                    <div class="overlay text-center">
+                        <span>Italian</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="food-types">
-            <div class="row">
-                <div class="col-md-3 col-lg-3 col-sm-6 mt-3">
-                    <div class="item text-center traditional">
-                        <span>Traditional</span>
-                    </div>
+        <section class="food-types mt-3">
+            <div class="owl-carousel owl-theme">
+                <div class="item text-center traditional">
+                    <span>Traditional</span>
                 </div>
-                <div class="col-md-3 col-lg-3 col-sm-6 mt-3">
-                    <div class="item text-center salad">
-                        <span>Salad</span>
-                    </div>
+                <div class="item text-center salad">
+                    <span>Salad</span>
                 </div>
-                <div class="col-md-3 col-lg-3 col-sm-6 mt-3">
-                    <div class="item text-center fish">
-                        <span>Fish</span>
-                    </div>
+                <div class="item text-center fish">
+                    <span>Fish</span>
                 </div>
-                <div class="col-md-3 col-lg-3 col-sm-6 mt-3">
-                    <div class="item text-center soup">
-                        <span>Soup</span>
-                    </div>
+                <div class="item text-center soup">
+                    <span>Soup</span>
                 </div>
             </div>
         </section>
@@ -159,8 +144,14 @@
                 <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
                     <div class="item">
                         <div class="card">
-                            <img class="card-img-top" src="assets/img/Food/manti.jpg" alt="Card image cap">
+                            <div class="image-container">
+                                <img class="card-img-top" src="assets/img/Food/manti.jpg" alt="Card image cap">
+                            </div>
                             <div class="card-body">
+                                <div class="res-container text-center" style="font-size: 1.5em;">
+                                    <i class="far fa-thumbs-up like" style="color:blue;"></i><span><small>78</small></span>
+                                    <i class="far fa-thumbs-down dislike" style="color:blue;"></i><span><small>3</small></span>
+                                </div>
                                 <form action="" method="post" id="formfood">
                                     <h4 class="card-title text-left food-name">Manti</h4>
                                     <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
@@ -172,7 +163,7 @@
                                             <input type="number" name="quantity" value='1' min='1' class="quantity">
                                         </p>
                                     </div>
-                                    <input type="submit" class="btn order-btn" value="Order">
+                                    <input type="submit" class="btn order-btn" value="add to cart">
                                 </form>
                             </div>
                         </div>
@@ -181,8 +172,14 @@
                 <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
                     <div class="item">
                         <div class="card">
-                            <img class="card-img-top" src="assets/img/Food/manti.jpg" alt="Card image cap">
+                            <div class="image-container">
+                                <img class="card-img-top" src="assets/img/Food/manti.jpg" alt="Card image cap">
+                            </div>
                             <div class="card-body">
+                                <div class="res-container text-center" style="font-size: 1.5em; overflow:hidden;">
+                                    <p class="float-left"><i class="far fa-thumbs-up like" style="color:blue"></i><span><small>78</small></span></p>
+                                    <p class="float-right"><span><small>3</small></span><i class="far fa-thumbs-down dislike" style="color:blue"></i></p>
+                                </div>
                                 <form action="" method="post" id="formfood">
                                     <h4 class="card-title text-left food-name">Manti</h4>
                                     <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
@@ -194,7 +191,7 @@
                                             <input type="number" name="quantity" value='1' min='1' class="quantity">
                                         </p>
                                     </div>
-                                    <input type="submit" class="btn order-btn" value="Order">
+                                    <input type="submit" class="btn order-btn" value="add to cart">
                                 </form>
                             </div>
                         </div>
@@ -203,8 +200,14 @@
                 <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
                     <div class="item">
                         <div class="card">
-                            <img class="card-img-top" src="assets/img/Food/manti.jpg" alt="Card image cap">
+                            <div class="image-container">
+                                <img class="card-img-top" src="assets/img/Food/manti.jpg" alt="Card image cap">
+                            </div>
                             <div class="card-body">
+                                <div class="res-container text-center" style="font-size: 1.5em;">
+                                    <i class="fas fa-heart like mr-1" style="color:red;"></i><span><small>78</small></span>
+                                    <i class="fas fa-heart-broken dislike mr-1" style="color:red"></i><span><small>3</small></span>
+                                </div>
                                 <form action="" method="post" id="formfood">
                                     <h4 class="card-title text-left food-name">Manti</h4>
                                     <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
@@ -216,7 +219,7 @@
                                             <input type="number" name="quantity" value='1' min='1' class="quantity">
                                         </p>
                                     </div>
-                                    <input type="submit" class="btn order-btn" value="Order">
+                                    <input type="submit" class="btn order-btn" value="add to cart">
                                 </form>
                             </div>
                         </div>
@@ -461,6 +464,7 @@
     <script src="assets/js/bootstrap.js"></script>
     <script src="assets/js/lightbox.js"></script>
     <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/cart.js"></script>
     <script>
         var wow = new WOW();
@@ -471,6 +475,31 @@
                 $('.custom-nav').addClass('wow fadeInDown');
             }
         });
+        $(document).ready(function(){
+            var owl = $('.owl-carousel');
+            owl.owlCarousel({
+                items: 4,
+                loop: false,
+                margin:10,
+                responsiveClass:true,
+                nav: false,
+                autoHeight: true,
+                responsive:{
+                    0:{
+                        items:1,
+                        nav:false
+                    },
+                    600:{
+                        items:2,
+                        nav:false
+                    },
+                        1000:{
+                        items:4,
+                        nav:false,
+                    }
+                }
+            });
+	    });
     </script>
 </body>
 

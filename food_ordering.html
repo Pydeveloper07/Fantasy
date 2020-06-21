@@ -172,15 +172,15 @@
             </div>
         </div>
         <div class="col-md-4 col-lg-4 col-sm-12 order-details">
-            <div class="card">
+            <div class="order-card">
                 <img src="assets/icons/shopping_cart_full.png" alt="" class="card-img-top">
                 <div class="card-body">
                     <div class="order-price row">
                         <p class="col-md-6">
-                            <i class="fas fa-dollar-sign"></i>Order price:
+                            <i class="fas fa-money-bill-wave"></i>Order price:
                         </p>
                         <p class="col-md-6 text-right">
-                            <i class="fas fa-dollar-sign"></i>90.00
+                            55,000
                         </p>
                     </div>
                     <div class="delivery-price row">
@@ -188,23 +188,31 @@
                             <i class="fas fa-truck"></i>Delivery fee:
                         </p>
                         <p class="col-md-6 text-right">
-                            <i class="fas fa-dollar-sign"></i>9.99
+                            10,000
                         </p>
                     </div>
                     <div class="phone row">
                         <p class="col-md-6">
                             <i class="fas fa-phone-alt"></i>Contact-number:
                         </p>
-                        <p class="col-md-6 text-right">
-                            +998970001122
+                        <p class="col-md-6 text-right phone-content">
+                            <button class="btn btn-info edit-phone-btn"><i class="fas fa-pencil-alt"></i></button>
+                            <span>+998970001122</span>
+                        </p>
+                        <p class="col-md-6 text-center edit-phone-block">
+                            <input class="form-control" type="text" name="phoneNumber">
                         </p>
                     </div>
                     <div class="address row">
-                        <p class="col-md-6">
+                        <p class="col-md-6 col-lg-6">
                             <i class="fas fa-map-marker-alt"></i>Address:
                         </p>
-                        <p class="col-md-6 text-right">
-                            Yunusobod-17, 9-uy, 31
+                        <p class="col-md-6 col-lg-6 text-right address-content">
+                            <button class="btn btn-info edit-add-btn"><i class="fas fa-pencil-alt"></i></button>
+                            <span>Yunusobod-17, 9-uy, 31</span>
+                        </p>
+                        <p class="col-md-6 col-lg-6 edit-address-block text-center">
+                            <input class="form-control" type="text" name="address">
                         </p>
                     </div>
                     <div class="client-status row">
@@ -212,15 +220,15 @@
                             <i class="fas fa-star-half-alt"></i>Client status:
                         </p>
                         <p class="col-md-6 text-right">
-                            Silver (3% off)
+                            None (0% off)
                         </p>
                     </div>
                     <div class="total-price row">
                         <p class="col-md-6">
-                            <i class="fas fa-dollar-sign"></i>Total price:
+                            <i class="fas fa-money-bill-wave"></i>Total price:
                         </p>
                         <p class="col-md-6 text-right">
-                            <i class="fas fa-dollar-sign"></i>97.29
+                            65,000
                         </p>
                     </div>
                     <button class="order-btn">
@@ -425,5 +433,47 @@
     <script src="assets/js/bootstrap.js"></script>
     <script src="assets/js/lightbox.js"></script>
     <script src="assets/js/wow.min.js"></script>
+    <script>
+        $('.order-details .address').mouseover(function(){
+            $(this).find('.edit-add-btn').css({'right':'0', 'opacity':'1'});
+        });
+        $('.order-details .address').mouseout(function(){
+            $(this).find('.edit-add-btn').css({'right':'50%', 'opacity':'0'});
+        });
+        $('.order-details .phone').mouseover(function(){
+            $(this).find('.edit-phone-btn').css({'right':'0', 'opacity':'1'});
+        });
+        $('.order-details .phone').mouseout(function(){
+            $(this).find('.edit-phone-btn').css({'right':'50%', 'opacity':'0'});
+        });
+        $('.edit-add-btn').click(function(){
+            $(this).closest('.address-content').fadeOut(50);
+            var address = $(this).siblings('span').text();
+            $('.edit-address-block input').val(address);
+            $('.edit-address-block').fadeIn();
+        });
+        $('.edit-address-block input').on('keypress', function(e){
+            if (e.key === 'Enter'){
+                var newAddress = $(this).val();
+                $('.address-content span').text(newAddress);
+                $(this).closest('.edit-address-block').fadeOut(50);
+                $('.address-content').fadeIn();
+            }
+        });
+        $('.edit-phone-btn').click(function(){
+            $(this).closest('.phone-content').fadeOut(50);
+            var phoneNumber = $(this).siblings('span').text();
+            $('.edit-phone-block input').val(phoneNumber);
+            $('.edit-phone-block').fadeIn();
+        });
+        $('.edit-phone-block input').on('keypress', function(e){
+            if (e.key === 'Enter'){
+                var newPhoneNumber = $(this).val();
+                $('.phone-content span').text(newPhoneNumber);
+                $(this).closest('.edit-phone-block').fadeOut(50);
+                $('.phone-content').fadeIn();
+            }
+        });
+    </script>
 </body>
 </html>
