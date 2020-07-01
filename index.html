@@ -131,7 +131,7 @@
 		</section>
 		<section class="discount-foods">
 			<h1 class="title">Get our foods at <span>&#127775;</span><span class="special">discount</span><span>&#127775;</span></h1>
-			<div class="owl-carousel owl-theme">
+			<div class="owl-carousel owl-theme owl-carousel-discount">
 				<div class="card">
 					<img class="card-img-top" src="assets/img/Food/manti.jpg" alt="Card image cap">
 					<div class="card-body">
@@ -517,95 +517,6 @@
 	<script src="assets/js/lightbox.js"></script>
 	<script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/owl.carousel.min.js"></script>
-	<script>
-		var form = $('#tableOrderForm');
-		form.find('select').on('change', function() {
-			$.ajax({
-                type: "POST",
-                url: "url",
-                data: {
-                    'tableId': foodId,
-                    'csrfmiddlewaretoken': '{{csrf_token}}',
-                },
-                dataType: 'json',
-                success: function (response) {
-                    warnUser(response);
-                },
-			});
-			var parent = form.find('#tableHelp');
-			function warnUser(response){
-				$.each(response, function(){
-					var elem = "<span>" + this.from + "-" + this.to + "</span>";
-					parent.append(elem);
-				});
-			}
-		});
-		$(document).on('click', '.star', function(){
-			 $('#rating').val($(this).attr('data-value'));
-			 value = $(this).attr('data-value');
-			 $(this).siblings('.star').each(function(){
-				 if ($(this).attr('data-value') <= value){
-					$(this).css({'color':'yellow'});
-				 }
-				 else{
-					 $(this).css({'color':'black'});
-				 }
-			 });
-			 $(this).css({'color': 'yellow'}); 
-			 elem = $('#rate-emoji');
-			 switch(value){
-				 case '1': elem.attr('class', 'ec ec-confounded'); break;
-				 case '2': elem.attr('class', 'ec ec-expressionless'); break;
-				 case '3': elem.attr('class', 'ec ec-blush'); break;
-				 case '4': elem.attr('class', 'ec ec-yum'); break;
-				 case '5': elem.attr('class', 'ec ec-heart-eyes'); break;
-				 default: elem.attr('class', '');
-			 }
-		});
-		$(document).ready(function(){
-        var owl = $('.owl-carousel');
-        owl.owlCarousel({
-            items: 3,
-            loop: true,
-            margin:10,
-            /*autoplay: false,
-            autoplayTimeout: 2000,
-            autoplayHoverPause: true,*/
-			responsiveClass:true,
-			nav: false,
-            autoHeight: true,
-            responsive:{
-                0:{
-                    items:1,
-                    nav:false
-                },
-                600:{
-                    items:2,
-                    nav:false
-                },
-                    1000:{
-                    items:3,
-                    nav:false,
-                }
-            }
-		});
-	});
-	</script>
-	<script>
-		var map;
-		function initialize() {
-			var mapOptions = {
-				zoom: 15,
-				center: { lat: 41.338, lng: 69.334 }
-			};
-			map = new google.maps.Map($('#map')[0], mapOptions);
-			var marker = new google.maps.Marker({
-				position: { lat: 41.338, lng: 69.334 },
-				map: map
-			});
-		}
-		$(window).on('load', initialize);
-	</script>
 </body>
 
 </html>

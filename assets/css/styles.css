@@ -741,29 +741,58 @@ footer img.right {
 	background: linear-gradient(214deg, rgba(255, 15, 222, 1) 41%, rgba(255, 108, 240, 1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff0fde", endColorstr="#ff6cf0", GradientType=1);
 }
-.history{
-	margin-bottom:5em;
-}
-.history .item{
-	margin-bottom:1em !important;
-	background: #e6f9ff;
-	border-radius: 10px;
-}
-.history .item img{
-	width:100%;
+.history .order-block .order-name{
+	background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+		url(/assets/projectPhotos/food-collage.jpg) no-repeat center;
+	background-size: cover;
 	height:100%;
+	border-radius: 20px;
 }
-.history .item .right{
-	border-left:1px solid black;
+.history .order-block .date-block{
+	background: rgb(185, 34, 187);
+	background: -moz-linear-gradient(180deg, rgba(185, 34, 187, 1) 20%, rgba(255, 255, 255, 1) 20%);
+	background: -webkit-linear-gradient(180deg, rgba(185, 34, 187, 1) 20%, rgba(255, 255, 255, 1) 20%);
+	background: linear-gradient(180deg, rgba(185, 34, 187, 1) 20%, rgba(255, 255, 255, 1) 20%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b922bb", endColorstr="#ffffff", GradientType=1);
+	height:100%;
+	border-radius:20px;
+	border: 1px solid rgb(185, 34, 187);
 }
-.history .item .item-content{
-	padding-top:0.5em;
-	padding-right:5em;
-}
-.history .item .item-content span{
+.order-block .date-block span{
 	position:absolute;
-	right:5%;
-	bottom:10%;
+	left:50%;
+	top:50%;
+	transform: translate(-50%, -50%);
+	font-size: 1.5em;
+	font-weight:bold;
+	color: white;
+	text-shadow:1px 0 2px black, 0 -1px 2px black, 0 1px 2px black;
+}
+.order-block .order-name span{
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%, -50%);
+	font-size: 3em;
+	font-style: italic;
+	font-weight: bold;
+	color:rgba(255, 255, 255, 1);
+	text-shadow:1px 0 2px black, 0 -1px 2px black, 0 1px 2px black;
+}
+.order-block .order-details .item-name{
+	background: rgb(255, 209, 209);
+	border-radius: 5px;
+	padding: 0.1em 1em;
+	margin-bottom:5px;
+}
+.order-block .summary{
+	border-radius: 10px;
+	background: rgb(205, 255, 186);
+	padding: 0.1em 1em;
+	display:inline-block;
+}
+.order-block .summary p{
+	margin-bottom:0;
 }
 /* Listings */
 .listings-header {
@@ -842,12 +871,12 @@ section.reviews{
 .rating-modal .rating-block span:last-of-type{
 	font-size: 2em;
 }
-.discount-foods .owl-stage,
-.discount-foods .owl-stage-outer,
-.discount-foods .owl.carousel {
+.owl-stage,
+.owl-stage-outer,
+.owl.carousel {
 	padding: 2em 0;
 }
-.discount-foods .owl-height{
+.owl-height{
 	height:100% !important;
 }
 .discount-foods .title{

@@ -122,7 +122,7 @@
         </section>
 
         <section class="food-types mt-3">
-            <div class="owl-carousel owl-theme">
+            <div class="owl-carousel owl-theme owl-carousel-type">
                 <div class="item text-center traditional">
                     <span>Traditional</span>
                 </div>
@@ -220,50 +220,6 @@
                                         </p>
                                     </div>
                                     <input type="submit" class="btn order-btn" value="add to cart">
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                    <div class="item">
-                        <div class="card">
-                            <img class="card-img-top" src="assets/img/Food/manti.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <form action="" method="post" id="formfood">
-                                    <h4 class="card-title text-left food-name">Manti</h4>
-                                    <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
-                                    <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
-                                    <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
-                                    <div class="row">
-                                        <p class="col-md-6 price" data-price="40000">40,000 sum</p>
-                                        <p class="col-md-6 text-right">
-                                            <input type="number" name="quantity" value='1' min='1' class="quantity">
-                                        </p>
-                                    </div>
-                                    <input type="submit" class="btn order-btn" value="Order">
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                    <div class="item">
-                        <div class="card">
-                            <img class="card-img-top" src="assets/img/Food/manti.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <form action="" method="post" id="formfood">
-                                    <h4 class="card-title text-left food-name">Manti</h4>
-                                    <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
-                                    <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
-                                    <p class="content">Go'sht, Piyoz, Un, Tuz, Suv</p>
-                                    <div class="row">
-                                        <p class="col-md-6 price" data-price="40000">40,000 sum</p>
-                                        <p class="col-md-6 text-right">
-                                            <input type="number" name="quantity" value='1' min='1' class="quantity">
-                                        </p>
-                                    </div>
-                                    <input type="submit" class="btn order-btn" value="Order">
                                 </form>
                             </div>
                         </div>
@@ -467,38 +423,9 @@
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/cart.js"></script>
     <script>
-        var wow = new WOW();
-        wow.init();
-        $(window).scroll(function () {
-            var scroll = $(window).scrollTop();
-            if (scroll > 10) {
-                $('.custom-nav').addClass('wow fadeInDown');
-            }
-        });
+        
         $(document).ready(function(){
-            var owl = $('.owl-carousel');
-            owl.owlCarousel({
-                items: 4,
-                loop: false,
-                margin:10,
-                responsiveClass:true,
-                nav: false,
-                autoHeight: true,
-                responsive:{
-                    0:{
-                        items:1,
-                        nav:false
-                    },
-                    600:{
-                        items:2,
-                        nav:false
-                    },
-                        1000:{
-                        items:4,
-                        nav:false,
-                    }
-                }
-            });
+            
 	    });
     </script>
 </body>
